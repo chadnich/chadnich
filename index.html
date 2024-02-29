@@ -171,7 +171,6 @@ body, html {
     <div class="w3-col m3">
       <img src="/w3images/p8.jpg" style="width:100%; display:none;" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
     </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
   </div>
 </div>
 
@@ -249,15 +248,18 @@ function onClick(element) {
 }
 
 // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
+$(function() {
+    var header = $(".w3-top");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 200) {
+            header.removeClass('header').addClass("header-alt");
+        } else {
+            header.removeClass("header-alt").addClass('header');
+        }
+    });
+});
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
