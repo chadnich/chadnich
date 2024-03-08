@@ -22,6 +22,13 @@ body, html {
   overflow-x:hidden;
 }
 
+  .w3-top{
+    background-color: #fff0;
+  }
+  .w3-top.w-bg{
+    background-color: #fff0;
+  }
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
   background-attachment: fixed;
@@ -267,13 +274,13 @@ body, html {
 <script>
 // Change style of navbar on scroll
 const body = document.querySelector('body');
-const div = document.querySelector('.container');
+const div = document.querySelector('.w3-top');
 
 console.log(window.innerHeight)
 
 document.addEventListener('scroll', () => {
   if (window.scrollY > window.innerHeight) {
-    div.classList.add('test')
+    div.classList.add('w-bg')
   }
 });
 
