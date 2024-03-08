@@ -266,8 +266,11 @@ body, html {
 <script>
 // Change style of navbar on scroll
 $(document).ready(function() {
+  console.log('ready');
   $(window).scroll(function(){
+    console.log('scroll');
       if ($(this).scrollTop() > 10) {
+        console.log('added');
          $('.w3-top').addClass('header-alt');
       } else {
          $('.w3-top').removeClass('header-alt');
