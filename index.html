@@ -263,19 +263,11 @@ body, html {
 </footer>
  
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
 // Change style of navbar on scroll
 $(document).ready(function() {
     var header = $(".w3-top");
   console.log('header set');
-    $(window).scroll(function() {    
+    $(document).scroll(function() {    
         var scroll = $(window).scrollTop();
       console.log('scroll set');
     console.log(scroll);
@@ -286,6 +278,14 @@ $(document).ready(function() {
         }
     });
 });
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
