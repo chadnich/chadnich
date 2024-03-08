@@ -51,6 +51,27 @@ body, html {
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
+/* Background splash on portfolio */
+  .bg-splash{
+    position:relative;
+  }
+  .bg-splash:before{
+    content: '';
+    position: absolute;
+    background-size: 140%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 130%;
+    width: 120%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bg-splash.bgsp1{
+    background-image: url(Yes%20Africa%20BG%20splash.webp);
+  }
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1000px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -138,37 +159,37 @@ body, html {
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
-    <div class="w3-col m3" style="background-image: url('Yes%20Africa%20BG%20splash.webp');">
+    <div class="w3-col m3 bg-splash bgsp1" style="background-image: url('Yes%20Africa%20BG%20splash.webp');">
       <img src="Yes-Africa-Portfolio.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Yes Africa website rebuild">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 bg-splash bgsp2">
       <img src="Beautiful-in-its-time-Portfolio.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Beautiful in it's Time build">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 bg-splash bgsp3">
       <img src="Card-Realm-Portfolio.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Card Realm UK Shopify build">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 bg-splash bgsp4">
       <img src="Susanna-Portfolio.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Susanna fix and optimise site">
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
+    <div class="w3-col m3 bg-splash bgsp5">
       <img src="ZylemSA-Portfolio.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Zylem SA fix and optimise site">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 bg-splash bgsp6">
       <img src="RegenZ-Portfolio.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="RegenZ optimise site">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 bg-splash bgsp7">
       <img src="Rocky-Bay-Portfolio.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Rocky Bay build">
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 bg-splash bgsp8">
       <img src="/w3images/p8.jpg" style="width:100%; display:none;" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
     </div>
   </div>
