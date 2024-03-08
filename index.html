@@ -58,7 +58,6 @@ body, html {
   .bg-splash:before{
     content: '';
     position: absolute;
-    background-size: 140%;
     background-position: center center;
     background-repeat: no-repeat;
     height: 130%;
@@ -70,9 +69,11 @@ body, html {
   }
   .bg-splash.bgsp1:before{
     background-image: url(Yes%20Africa%20BG%20splash.webp);
+    background-size: 140%;
   }
   .bg-splash.bgsp2:before{
     background-image: url(Beautiful-in-its-time-BG.webp);
+    background-size: 120%;
   }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -265,18 +266,13 @@ body, html {
 <script>
 // Change style of navbar on scroll
 $(document).ready(function() {
-    var header = $(".w3-top");
-  console.log('header set');
-    $(document).scroll(function() {    
-        var scroll = $(window).scrollTop();
-      console.log('scroll set');
-    console.log(scroll);
-        if (scroll >= 200) {
-            header.addClass("header-alt");
-        } else {
-            header.removeClass("header-alt");
-        }
-    });
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 10) {
+         $('.box').addClass('header-alt');
+      } else {
+         $('.box').removeClass('header-alt');
+      }
+  });
 });
 
 // Modal Image Gallery
